@@ -20,18 +20,19 @@
     .navlinks a:hover{color:var(--green)}.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
     .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:1px solid var(--green);border-radius:12px;background:var(--green);color:#0a1a0e;text-decoration:none;font-weight:600;transition:all .2s;cursor:pointer;font-size:.95rem}
     .button:hover{background:#6ec583;border-color:#6ec583}.button:active{transform:scale(.98)}
+    .button.secondary{background:transparent;color:var(--text)}.button.secondary:hover{background:rgba(130,212,149,.15);border-color:var(--green)}
     .hero{position:relative;overflow:hidden;height:clamp(540px,calc(100svh - 72px),640px);min-height:0;display:flex;align-items:center;padding:clamp(52px,8vh,82px) 0;background:linear-gradient(90deg,rgba(8,17,12,.9),rgba(8,17,12,.7)),url(assets/field-hero.webp) center/cover;}.hero-grid{display:grid;grid-template-columns:1fr;gap:40px}.hero h1{font-size:clamp(2.2rem,7vw,4.5rem);line-height:1.1;letter-spacing:-.05em;margin:0}.hero h1 span{color:var(--green);display:block}.lead{font-size:clamp(1rem,1.8vw,1.3rem);line-height:1.6;color:var(--muted);max-width:560px;margin:20px 0}.actions{display:flex;gap:20px;flex-wrap:wrap;margin-top:32px}.micro{font-size:.85rem;color:var(--muted);margin:0}
     .eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--olive);display:block;margin-bottom:12px}
     section{padding:clamp(70px,9vw,112px) 0}.section-head{max-width:700px;margin-bottom:38px}.section-head h2{margin:10px 0 12px;font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.045em}.section-head p{font-size:clamp(1rem,1.3vw,1.2rem);color:var(--muted);line-height:1.6;margin:0}
     .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}.feature{padding:24px 28px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(16,28,20,.5),rgba(20,36,26,.3));transition:all .3s}.feature:hover{background:linear-gradient(135deg,rgba(16,28,20,.8),rgba(20,36,26,.6));border-color:var(--green)}.feature-icon{font-size:1.6rem;margin-bottom:12px;display:block}.feature h3{margin:0 0 8px;font-size:1.1rem}.feature p{margin:0;font-size:.95rem;color:var(--muted);line-height:1.5}
     .channel-showcase{padding-top:24px}.showcase-card{display:grid;grid-template-columns:1.08fr .92fr;align-items:stretch;overflow:hidden;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(16,28,20,.4),rgba(20,36,26,.2))}.showcase-copy{padding:clamp(34px,6vw,70px);display:flex;flex-direction:column;justify-content:center}.showcase-copy h2{margin:0 0 20px;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;letter-spacing:-.045em}.showcase-copy p{margin:0 0 24px;font-size:1.05rem;color:var(--muted);line-height:1.6}.showcase-visual{position:relative;display:flex;align-items:center;justify-content:center;padding:clamp(24px,4vw,40px);background:linear-gradient(135deg,rgba(15,24,18,.8),rgba(20,36,26,.6))}.showcase-label{position:absolute;top:12px;left:12px;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--olive)}.showcase-screen{max-width:100%;height:auto;display:block;filter:drop-shadow(var(--shadow))}.showcase-points{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;font-size:.9rem;font-weight:600;color:var(--green)}.showcase-points span{display:flex;align-items:center;gap:8px}.showcase-points span:before{content:"✓";color:var(--green);font-weight:bold}
-    .supported-radios{background:#0d1811;border-block:1px solid var(--line)}.radios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}.radio-brand{padding:28px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(16,28,20,.6),rgba(20,36,26,.4));transition:all .3s}.radio-brand:hover{background:linear-gradient(135deg,rgba(16,28,20,.9),rgba(20,36,26,.7));border-color:var(--green)}.radio-brand h3{margin:0 0 16px;font-size:1.15rem;color:var(--green);font-weight:600}.radio-models{list-style:none;margin:0;padding:0;display:grid;gap:8px}.radio-models li{font-size:.95rem;color:var(--text);display:flex;align-items:center;gap:8px;padding:6px 0}.radio-models li:before{content:"•";color:var(--green);font-weight:bold;min-width:8px}
+    .supported-radios{background:#0d1811;border-block:1px solid var(--line)}.radios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}.radio-brand{padding:28px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(16,28,20,.6),rgba(20,36,26,.4));transition:all .3s}.radio-brand:hover{background:linear-gradient(135deg,rgba(16,28,20,.9),rgba(20,36,26,.7));border-color:var(--green)}.radio-brand.baofeng{grid-column:span 2}.radio-brand h3{margin:0 0 16px;font-size:1.15rem;color:var(--green);font-weight:600}.radio-models{list-style:none;margin:0;padding:0;display:grid;gap:8px}.radio-brand.baofeng .radio-models{grid-template-columns:1fr 1fr}.radio-models li{font-size:.95rem;color:var(--text);display:flex;align-items:center;gap:8px;padding:6px 0}.radio-models li:before{content:"•";color:var(--green);font-weight:bold;min-width:8px}
     .imports{background:#0d1811;border-block:1px solid var(--line)}.imports-grid{display:grid;grid-template-columns:.78fr 1.22fr;align-items:center;gap:clamp(42px,8vw,90px)}.import-visual{position:relative}.import-screen{max-width:100%;height:auto;display:block;filter:drop-shadow(var(--shadow));border-radius:16px}.import-copy h2{margin:0 0 20px;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;letter-spacing:-.045em}.import-copy p{margin:0 0 24px;font-size:1.05rem;color:var(--muted);line-height:1.6}.import-options{display:grid;grid-template-columns:1fr;gap:16px}.import-option{padding:20px 24px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,rgba(16,28,20,.5),rgba(20,36,26,.2));transition:all .3s}.import-option:hover{background:linear-gradient(135deg,rgba(16,28,20,.8),rgba(20,36,26,.5));border-color:var(--green)}.tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--olive);margin-bottom:8px;padding:4px 8px;background:rgba(132,155,65,.1);border-radius:4px}.import-option h3{margin:0 0 6px;font-size:.95rem;font-weight:600}.import-option p{margin:0;font-size:.85rem;color:var(--muted);line-height:1.5}
     .workflow{background:#0d1811;border-block:1px solid var(--line)}.steps{counter-reset:steps;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{position:relative;padding:28px 26px 28px 50px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(16,28,20,.5),rgba(20,36,26,.3))}.step:before{counter-increment:steps;content:counter(steps);position:absolute;left:18px;top:24px;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--green);color:#0a1a0e;font-weight:700;font-size:.95rem}.step h3{margin:0 0 12px;font-size:1rem;font-weight:600}.step p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.5}
     .download{padding-bottom:24px}.download-card{position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px;padding:clamp(34px,6vw,70px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(47,143,78,.15),rgba(130,212,149,.08));}.download-copy h2{margin:0 0 20px;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;letter-spacing:-.045em}.download-copy p{margin:0 0 12px;font-size:1rem;color:var(--muted);line-height:1.6}.download-action{display:flex;flex-direction:column;align-items:flex-start;gap:12px}.play-badge{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:rgba(16,28,20,.6);text-decoration:none;transition:all .2s;width:fit-content}.play-badge:hover{background:rgba(130,212,149,.15);border-color:var(--green)}.play-badge svg{width:48px;height:auto}.play-copy{display:flex;flex-direction:column;line-height:1.2}.play-copy small{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.play-copy strong{font-size:1rem;color:var(--text)}.download-note{font-size:.8rem;color:var(--muted);margin:0}
     .privacy-card{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;padding:clamp(28px,5vw,52px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,#15281b,#101c14)}.privacy-card h2{margin:0 0 16px;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.2;letter-spacing:-.045em}.privacy-card p{margin:0;font-size:.95rem;color:var(--muted);line-height:1.7}
     footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.83rem}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    @media(max-width:850px){.privacy-card,.imports-grid,.showcase-card,.download-card{grid-template-columns:1fr}.download-action{justify-items:start}.import-visual{order:2}.import-copy{order:1}.import-copy h2{margin-top:20px}.steps{grid-template-columns:1fr}.radios-grid{grid-template-columns:1fr}}
+    @media(max-width:850px){.privacy-card,.imports-grid,.showcase-card,.download-card{grid-template-columns:1fr}.download-action{justify-items:start}.import-visual{order:2}.import-copy{order:1}.import-copy h2{margin-top:20px}.steps{grid-template-columns:1fr}.radios-grid{grid-template-columns:1fr}.radio-brand.baofeng{grid-column:span 1}.radio-brand.baofeng .radio-models{grid-template-columns:1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
   </style>
 </head>
@@ -49,7 +50,7 @@
           <span class="eyebrow">Android radio programming</span>
           <h1>Program radios. <span>Stay in the field.</span></h1>
           <p class="lead">Field Programmer gives radio operators a portable way to organize channels, adjust supported settings, and program compatible handhelds—without carrying a laptop.</p>
-          <div class="actions"><a class="button" href="https://play.google.com/store/apps/details?id=com.ka0med.fieldprogrammer&hl=en_US" target="_blank" rel="noopener noreferrer">Get it on Google Play</a><a class="button" style="background:transparent;border-color:var(--green)" href="#radios">See supported radios</a></div>
+          <div class="actions"><a class="button" href="https://play.google.com/store/apps/details?id=com.ka0med.fieldprogrammer&hl=en_US" target="_blank" rel="noopener noreferrer">Get it on Google Play</a><a class="button secondary" href="#radios">See supported radios</a></div>
           <p class="micro">Built for amateur radio operators, volunteer communicators, and radio enthusiasts.</p>
         </div>
       </div>
@@ -93,14 +94,9 @@
       <div class="wrap">
         <div class="section-head"><span class="eyebrow">Compatible hardware</span><h2>Radios you can program right now.</h2><p>Field Programmer supports a growing list of dual-band and single-band handhelds from trusted manufacturers.</p></div>
         <div class="radios-grid">
-          <div class="radio-brand">
+          <div class="radio-brand baofeng">
             <h3>Baofeng</h3>
             <ul class="radio-models">
-              <li>UV-5R</li>
-              <li>UV-5G</li>
-              <li>UV-5R Mini</li>
-              <li>UV-5RH</li>
-              <li>Mini 5</li>
               <li>AR-152</li>
               <li>BF-F8</li>
               <li>BF-F9</li>
@@ -108,11 +104,16 @@
               <li>FF-12P</li>
               <li>GT-3</li>
               <li>GT-3 MKII</li>
+              <li>Mini 5</li>
+              <li>UV-17R Plus</li>
+              <li>UV-32</li>
+              <li>UV-5G</li>
+              <li>UV-5R</li>
+              <li>UV-5R Mini</li>
+              <li>UV-5RH</li>
               <li>UV-850</li>
               <li>UV-920</li>
               <li>UV-B2+</li>
-              <li>UV-17R Plus</li>
-              <li>UV-32</li>
             </ul>
           </div>
           <div class="radio-brand">
