@@ -14,19 +14,24 @@
   <link rel="apple-touch-icon" href="assets/field-programmer-icon.png">
   <title>Field Programmer | Android Radio Programming</title>
   <style>
-    :root{--bg:#08110c;--panel:#101c14;--panel2:#14241a;--line:#294033;--text:#f3f8f4;--muted:#a9b9ae;--green:#82d495;--green2:#2f8f4e;--olive:#849b41;--cream:#eee7d2;--amber:#ffcc70;--shadow:0 26px 70px rgba(0,0,0,.35)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-    header{position:sticky;top:0;z-index:10;background:rgba(8,17,12,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(130,212,149,.16)}nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.025em;text-decoration:none}.mark{width:40px;height:40px;display:block;overflow:hidden;border:1px solid rgba(255,255,255,.18);border-radius:11px;background:#173721;box-shadow:0 0 0 1px rgba(0,0,0,.18)}.mark img{display:block;width:100%;height:100%;object-fit:cover}.navlinks{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:.9rem;font-weight:700}.navlinks a{text-decoration:none}.navlinks a:hover{color:var(--text)}
-    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:1px solid var(--green);border-radius:12px;background:var(--green);color:#0a1a0e;text-decoration:none;font-weight:850;box-shadow:0 12px 30px rgba(58,150,81,.2);transition:.2s ease}.button:hover,.button:focus-visible{transform:translateY(-2px);filter:brightness(1.05);outline:none}.button.secondary{background:transparent;color:var(--text);border-color:var(--line);box-shadow:none}
-    .hero{position:relative;overflow:hidden;height:clamp(540px,calc(100svh - 72px),640px);min-height:0;display:flex;align-items:center;padding:clamp(52px,8vh,82px) 0;background:linear-gradient(90deg,rgba(5,11,7,.97) 0%,rgba(5,11,7,.88) 29%,rgba(5,11,7,.55) 52%,rgba(5,11,7,.10) 78%),url("assets/field-hero.webp") center center/cover no-repeat}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,17,12,.06) 55%,rgba(8,17,12,.72) 100%);pointer-events:none}.hero:after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}.hero-grid{position:relative;z-index:1}.hero-grid>div{max-width:650px}.eyebrow{color:var(--green);font-size:.78rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.hero h1{max-width:680px;color:var(--cream);margin:13px 0 18px;font-size:clamp(3rem,6vw,5.8rem);line-height:.91;letter-spacing:-.065em}.hero h1 span{color:var(--green)}.lead{max-width:620px;margin:0;color:#c6d3ca;font-size:clamp(1rem,2vw,1.17rem);line-height:1.72;text-shadow:0 1px 12px rgba(0,0,0,.35)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.hero .button.secondary{background:rgba(7,15,10,.52);border-color:rgba(220,235,224,.35);backdrop-filter:blur(8px)}.micro{margin:16px 0 0;color:#a8b7ad;font-size:.82rem}
-    section{padding:clamp(70px,9vw,112px) 0}.section-head{max-width:700px;margin-bottom:38px}.section-head h2{margin:10px 0 12px;font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.045em}.section-head p{margin:0;color:var(--muted);line-height:1.7}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{padding:26px;border:1px solid var(--line);border-top:2px solid rgba(132,155,65,.48);border-radius:15px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015))}.feature-icon{width:43px;height:43px;display:grid;place-items:center;margin-bottom:24px;border-radius:12px;background:#173721;color:var(--green);font-weight:900}.feature h3{margin:0 0 8px;font-size:1.1rem}.feature p{margin:0;color:var(--muted);line-height:1.58;font-size:.92rem}
-    .channel-showcase{padding-top:24px}.showcase-card{display:grid;grid-template-columns:1.08fr .92fr;align-items:stretch;overflow:hidden;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,#15281b,#0d1710);box-shadow:var(--shadow)}.showcase-copy{align-self:center;padding:clamp(34px,6vw,68px)}.showcase-copy h2{margin:10px 0 14px;font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.045em}.showcase-copy>p{margin:0;color:var(--muted);line-height:1.7}.showcase-points{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}.showcase-points span{display:inline-flex;align-items:center;min-height:36px;padding:0 12px;border:1px solid #35533e;border-radius:999px;background:#17271c;color:#d9e7dd;font-size:.78rem;font-weight:800}.showcase-visual{position:relative;min-height:520px;display:grid;place-items:end center;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(83,177,105,.28),transparent 55%),linear-gradient(160deg,#183120,#0a120d)}.showcase-visual:before{content:"";position:absolute;width:390px;height:390px;border:1px solid rgba(130,212,149,.16);border-radius:50%}.showcase-screen{position:relative;z-index:1;display:block;width:min(72%,280px);height:auto;margin-top:42px;border:8px solid #151b17;border-bottom:0;border-radius:31px 31px 0 0;background:#151b17;box-shadow:0 28px 70px rgba(0,0,0,.52)}.showcase-label{position:absolute;z-index:2;right:20px;top:20px;padding:8px 11px;border:1px solid rgba(255,255,255,.14);border-radius:999px;background:rgba(8,17,12,.76);backdrop-filter:blur(8px);color:#d8e6dc;font-size:.72rem;font-weight:850}
-    .imports{background:#0d1811;border-block:1px solid var(--line)}.imports-grid{display:grid;grid-template-columns:.78fr 1.22fr;align-items:center;gap:clamp(42px,8vw,90px)}.import-visual{position:relative;display:grid;place-items:center}.import-visual:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;background:radial-gradient(circle,rgba(67,154,88,.24),transparent 68%)}.import-screen{position:relative;z-index:1;display:block;width:min(100%,330px);height:auto;border:9px solid #171d19;border-radius:34px;background:#111;box-shadow:0 28px 70px rgba(0,0,0,.48)}.import-copy h2{margin:10px 0 14px;font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.045em}.import-copy>.intro{margin:0 0 28px;color:var(--muted);line-height:1.7}.import-options{display:grid;grid-template-columns:1fr 1fr;gap:13px}.import-option{padding:20px;border:1px solid var(--line);border-radius:17px;background:var(--panel2)}.import-option .tag{display:inline-flex;min-height:29px;align-items:center;padding:0 9px;margin-bottom:13px;border-radius:8px;background:#1c4628;color:var(--green);font-size:.72rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}.import-option h3{margin:0 0 7px;font-size:1rem}.import-option p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.52}
-    .workflow{background:#0d1811;border-block:1px solid var(--line)}.steps{counter-reset:steps;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{position:relative;padding:28px 26px 28px 74px;border-radius:18px;background:var(--panel2)}.step:before{counter-increment:steps;content:counter(steps);position:absolute;left:24px;top:26px;width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:var(--green);color:#0b1a0f;font-weight:900}.step h3{margin:0 0 7px}.step p{margin:0;color:var(--muted);line-height:1.55;font-size:.9rem}
-    .download{padding-bottom:24px}.download-card{position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px;padding:clamp(34px,6vw,70px);border:1px solid #3b6245;border-radius:28px;background:radial-gradient(circle at 88% 24%,rgba(130,212,149,.24),transparent 34%),linear-gradient(135deg,#17301f,#0d1811);box-shadow:var(--shadow)}.download-card:after{content:"";position:absolute;right:-90px;bottom:-150px;width:360px;height:360px;border:1px solid rgba(130,212,149,.12);border-radius:50%;pointer-events:none}.download-copy{position:relative;z-index:1}.download-copy h2{max-width:650px;margin:10px 0 14px;font-size:clamp(2.35rem,5vw,4.5rem);line-height:.98;letter-spacing:-.05em}.download-copy p{max-width:620px;margin:0;color:#bfcec3;line-height:1.7}.download-action{position:relative;z-index:1;display:grid;justify-items:center;gap:13px}.play-badge{display:inline-flex;align-items:center;gap:13px;min-width:220px;min-height:68px;padding:10px 18px;border:1px solid #7f8b82;border-radius:11px;background:#050505;color:#fff;text-decoration:none;box-shadow:0 18px 38px rgba(0,0,0,.34);transition:.2s ease}.play-badge:hover,.play-badge:focus-visible{transform:translateY(-2px);filter:brightness(1.08);outline:2px solid var(--green);outline-offset:3px}.play-badge svg{width:34px;height:38px;flex:0 0 auto}.play-copy{display:grid;line-height:1}.play-copy small{margin-bottom:4px;font-size:.68rem;font-weight:700;letter-spacing:.08em}.play-copy strong{font-size:1.5rem;font-weight:600;letter-spacing:-.035em}.download-note{margin:0;color:#92a399;font-size:.78rem;text-align:center}
-    .privacy-card{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;padding:clamp(28px,5vw,52px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,#15281b,#101914)}.privacy-card h2{margin:8px 0;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.04em}.privacy-card p{margin:0 0 16px;color:var(--muted);line-height:1.7}.privacy-card a{color:var(--green);font-weight:800}
+    :root{--bg:#08110c;--panel:#101c14;--panel2:#14241a;--line:#294033;--text:#f3f8f4;--muted:#a9b9ae;--green:#82d495;--green2:#2f8f4e;--olive:#849b41;--cream:#eee7d2;--amber:#ffcc70;--shadow:0 26px 48px -20px rgba(0,0,0,.4)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif,-apple-system,BlinkMacSystemFont}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,17,12,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(130,212,149,.16)}nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;font-size:1.1rem;color:var(--text)}.mark{display:inline-flex}.navlinks{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--text);font-size:.95rem;transition:color .2s}
+    .navlinks a:hover{color:var(--green)}.wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border:1px solid var(--green);border-radius:12px;background:var(--green);color:#0a1a0e;text-decoration:none;font-weight:600;transition:all .2s;cursor:pointer;font-size:.95rem}
+    .button:hover{background:#6ec583;border-color:#6ec583}.button:active{transform:scale(.98)}
+    .hero{position:relative;overflow:hidden;height:clamp(540px,calc(100svh - 72px),640px);min-height:0;display:flex;align-items:center;padding:clamp(52px,8vh,82px) 0;background:linear-gradient(90deg,rgba(8,17,12,.9),rgba(8,17,12,.7)),url(assets/field-hero.webp) center/cover;}.hero-grid{display:grid;grid-template-columns:1fr;gap:40px}.hero h1{font-size:clamp(2.2rem,7vw,4.5rem);line-height:1.1;letter-spacing:-.05em;margin:0}.hero h1 span{color:var(--green);display:block}.lead{font-size:clamp(1rem,1.8vw,1.3rem);line-height:1.6;color:var(--muted);max-width:560px;margin:20px 0}.actions{display:flex;gap:20px;flex-wrap:wrap;margin-top:32px}.micro{font-size:.85rem;color:var(--muted);margin:0}
+    .eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--olive);display:block;margin-bottom:12px}
+    section{padding:clamp(70px,9vw,112px) 0}.section-head{max-width:700px;margin-bottom:38px}.section-head h2{margin:10px 0 12px;font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.045em}.section-head p{font-size:clamp(1rem,1.3vw,1.2rem);color:var(--muted);line-height:1.6;margin:0}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}.feature{padding:24px 28px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(16,28,20,.5),rgba(20,36,26,.3));transition:all .3s}.feature:hover{background:linear-gradient(135deg,rgba(16,28,20,.8),rgba(20,36,26,.6));border-color:var(--green)}.feature-icon{font-size:1.6rem;margin-bottom:12px;display:block}.feature h3{margin:0 0 8px;font-size:1.1rem}.feature p{margin:0;font-size:.95rem;color:var(--muted);line-height:1.5}
+    .channel-showcase{padding-top:24px}.showcase-card{display:grid;grid-template-columns:1.08fr .92fr;align-items:stretch;overflow:hidden;border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(16,28,20,.4),rgba(20,36,26,.2))}.showcase-copy{padding:clamp(34px,6vw,70px);display:flex;flex-direction:column;justify-content:center}.showcase-copy h2{margin:0 0 20px;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;letter-spacing:-.045em}.showcase-copy p{margin:0 0 24px;font-size:1.05rem;color:var(--muted);line-height:1.6}.showcase-visual{position:relative;display:flex;align-items:center;justify-content:center;padding:clamp(24px,4vw,40px);background:linear-gradient(135deg,rgba(15,24,18,.8),rgba(20,36,26,.6))}.showcase-label{position:absolute;top:12px;left:12px;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--olive)}.showcase-screen{max-width:100%;height:auto;display:block;filter:drop-shadow(var(--shadow))}.showcase-points{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;font-size:.9rem;font-weight:600;color:var(--green)}.showcase-points span{display:flex;align-items:center;gap:8px}.showcase-points span:before{content:"✓";color:var(--green);font-weight:bold}
+    .supported-radios{background:#0d1811;border-block:1px solid var(--line)}.radios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}.radio-brand{padding:28px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(16,28,20,.6),rgba(20,36,26,.4));transition:all .3s}.radio-brand:hover{background:linear-gradient(135deg,rgba(16,28,20,.9),rgba(20,36,26,.7));border-color:var(--green)}.radio-brand h3{margin:0 0 16px;font-size:1.15rem;color:var(--green);font-weight:600}.radio-models{list-style:none;margin:0;padding:0;display:grid;gap:8px}.radio-models li{font-size:.95rem;color:var(--text);display:flex;align-items:center;gap:8px;padding:6px 0}.radio-models li:before{content:"•";color:var(--green);font-weight:bold;min-width:8px}
+    .imports{background:#0d1811;border-block:1px solid var(--line)}.imports-grid{display:grid;grid-template-columns:.78fr 1.22fr;align-items:center;gap:clamp(42px,8vw,90px)}.import-visual{position:relative}.import-screen{max-width:100%;height:auto;display:block;filter:drop-shadow(var(--shadow));border-radius:16px}.import-copy h2{margin:0 0 20px;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;letter-spacing:-.045em}.import-copy p{margin:0 0 24px;font-size:1.05rem;color:var(--muted);line-height:1.6}.import-options{display:grid;grid-template-columns:1fr;gap:16px}.import-option{padding:20px 24px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,rgba(16,28,20,.5),rgba(20,36,26,.2));transition:all .3s}.import-option:hover{background:linear-gradient(135deg,rgba(16,28,20,.8),rgba(20,36,26,.5));border-color:var(--green)}.tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--olive);margin-bottom:8px;padding:4px 8px;background:rgba(132,155,65,.1);border-radius:4px}.import-option h3{margin:0 0 6px;font-size:.95rem;font-weight:600}.import-option p{margin:0;font-size:.85rem;color:var(--muted);line-height:1.5}
+    .workflow{background:#0d1811;border-block:1px solid var(--line)}.steps{counter-reset:steps;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{position:relative;padding:28px 26px 28px 50px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(16,28,20,.5),rgba(20,36,26,.3))}.step:before{counter-increment:steps;content:counter(steps);position:absolute;left:18px;top:24px;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--green);color:#0a1a0e;font-weight:700;font-size:.95rem}.step h3{margin:0 0 12px;font-size:1rem;font-weight:600}.step p{margin:0;font-size:.9rem;color:var(--muted);line-height:1.5}
+    .download{padding-bottom:24px}.download-card{position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px;padding:clamp(34px,6vw,70px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,rgba(47,143,78,.15),rgba(130,212,149,.08));}.download-copy h2{margin:0 0 20px;font-size:clamp(1.8rem,4vw,3rem);line-height:1.1;letter-spacing:-.045em}.download-copy p{margin:0 0 12px;font-size:1rem;color:var(--muted);line-height:1.6}.download-action{display:flex;flex-direction:column;align-items:flex-start;gap:12px}.play-badge{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:rgba(16,28,20,.6);text-decoration:none;transition:all .2s;width:fit-content}.play-badge:hover{background:rgba(130,212,149,.15);border-color:var(--green)}.play-badge svg{width:48px;height:auto}.play-copy{display:flex;flex-direction:column;line-height:1.2}.play-copy small{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.play-copy strong{font-size:1rem;color:var(--text)}.download-note{font-size:.8rem;color:var(--muted);margin:0}
+    .privacy-card{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;padding:clamp(28px,5vw,52px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(135deg,#15281b,#101c14)}.privacy-card h2{margin:0 0 16px;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.2;letter-spacing:-.045em}.privacy-card p{margin:0;font-size:.95rem;color:var(--muted);line-height:1.7}
     footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.83rem}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    @media(max-width:850px){.privacy-card,.imports-grid,.showcase-card,.download-card{grid-template-columns:1fr}.download-action{justify-items:start}.import-visual{order:2}.import-copy{order:1}.import-screen{width:min(100%,320px)}.features,.steps{grid-template-columns:1fr 1fr}.navlinks a:not(.button){display:none}}@media(max-width:580px){.wrap{width:min(100% - 28px,1120px)}.hero{height:clamp(540px,calc(100svh - 72px),610px);min-height:0;padding:56px 0;background-position:64% center;background-image:linear-gradient(90deg,rgba(5,11,7,.97) 0%,rgba(5,11,7,.88) 56%,rgba(5,11,7,.34) 100%),url("assets/field-hero.webp")}.hero h1{font-size:3.05rem}.lead{color:#d1dbd4}.showcase-copy{padding:34px 24px}.showcase-visual{min-height:430px}.showcase-screen{width:235px;margin-top:32px;border-width:7px}.download-card{gap:30px}.download-action{justify-items:start}.features,.steps,.import-options{grid-template-columns:1fr}.navlinks{gap:0}.brand span:last-child{font-size:.94rem}}
+    @media(max-width:850px){.privacy-card,.imports-grid,.showcase-card,.download-card{grid-template-columns:1fr}.download-action{justify-items:start}.import-visual{order:2}.import-copy{order:1}.import-copy h2{margin-top:20px}.steps{grid-template-columns:1fr}.radios-grid{grid-template-columns:1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
   </style>
 </head>
@@ -34,7 +39,7 @@
   <header>
     <nav class="wrap" aria-label="Primary navigation">
       <a class="brand" href="./"><span class="mark"><img src="assets/field-programmer-icon.png" width="40" height="40" alt=""></span><span>Field Programmer</span></a>
-      <div class="navlinks"><a href="#features">Features</a><a href="#imports">Imports</a><a href="#workflow">How it works</a><a href="privacy.html">Privacy</a><a class="button" href="https://play.google.com/store/apps/details?id=com.ka0med.fieldprogrammer&hl=en_US" target="_blank" rel="noopener noreferrer">Get the app</a></div>
+      <div class="navlinks"><a href="#features">Features</a><a href="#radios">Radios</a><a href="#imports">Imports</a><a href="#workflow">How it works</a><a href="privacy.html">Privacy</a><a class="button" href="https://play.google.com/store/apps/details?id=com.ka0med.fieldprogrammer&hl=en_US" target="_blank" rel="noopener noreferrer">Get it on Google Play</a></div>
     </nav>
   </header>
   <main>
@@ -44,7 +49,7 @@
           <span class="eyebrow">Android radio programming</span>
           <h1>Program radios. <span>Stay in the field.</span></h1>
           <p class="lead">Field Programmer gives radio operators a portable way to organize channels, adjust supported settings, and program compatible handhelds—without carrying a laptop.</p>
-          <div class="actions"><a class="button" href="https://play.google.com/store/apps/details?id=com.ka0med.fieldprogrammer&hl=en_US" target="_blank" rel="noopener noreferrer">Get it on Google Play</a><a class="button secondary" href="#features">Explore features</a></div>
+          <div class="actions"><a class="button" href="https://play.google.com/store/apps/details?id=com.ka0med.fieldprogrammer&hl=en_US" target="_blank" rel="noopener noreferrer">Get it on Google Play</a><a class="button" style="background:transparent;border-color:var(--green)" href="#radios">See supported radios</a></div>
           <p class="micro">Built for amateur radio operators, volunteer communicators, and radio enthusiasts.</p>
         </div>
       </div>
@@ -53,7 +58,7 @@
 
     <section id="features">
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow">Made for practical radio work</span><h2>A full channel plan in your pocket.</h2><p>Build and maintain a useful codeplug from an Android device, with a workflow designed around real radios and real field conditions.</p></div>
+        <div class="section-head"><span class="eyebrow">Made for practical radio work</span><h2>A full channel plan in your pocket.</h2><p>Build and maintain a useful codeplug from an Android device, anywhere the signal reaches.</p></div>
         <div class="features">
           <article class="feature"><div class="feature-icon">⌁</div><h3>Bluetooth & USB</h3><p>Connect to supported radios using the interface available for your model and Android device.</p></article>
           <article class="feature"><div class="feature-icon">≡</div><h3>Fast channel editing</h3><p>Edit frequencies, names, tones, offsets, power, and other model-supported channel options.</p></article>
@@ -78,7 +83,58 @@
           </div>
           <div class="showcase-visual">
             <span class="showcase-label">Real app interface</span>
-            <img class="showcase-screen" src="assets/channel-list.webp" width="700" height="1559" loading="lazy" alt="Field Programmer channel list with read and write controls and programmed radio frequencies">
+            <img class="showcase-screen" src="assets/channel-list.webp" width="700" height="1559" loading="lazy" alt="Field Programmer channel list with read and write controls and programmed radios">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="supported-radios" id="radios">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Compatible hardware</span><h2>Radios you can program right now.</h2><p>Field Programmer supports a growing list of dual-band and single-band handhelds from trusted manufacturers.</p></div>
+        <div class="radios-grid">
+          <div class="radio-brand">
+            <h3>Baofeng</h3>
+            <ul class="radio-models">
+              <li>UV-5R</li>
+              <li>UV-5G</li>
+              <li>UV-5R Mini</li>
+              <li>UV-5RH</li>
+              <li>Mini 5</li>
+              <li>AR-152</li>
+              <li>BF-F8</li>
+              <li>BF-F9</li>
+              <li>BF-UVB2+</li>
+              <li>FF-12P</li>
+              <li>GT-3</li>
+              <li>GT-3 MKII</li>
+              <li>UV-850</li>
+              <li>UV-920</li>
+              <li>UV-B2+</li>
+              <li>UV-17R Plus</li>
+              <li>UV-32</li>
+            </ul>
+          </div>
+          <div class="radio-brand">
+            <h3>Radioddity</h3>
+            <ul class="radio-models">
+              <li>UV-5G</li>
+              <li>UV-5R EX</li>
+            </ul>
+          </div>
+          <div class="radio-brand">
+            <h3>Retevis</h3>
+            <ul class="radio-models">
+              <li>RT5</li>
+              <li>RT5R</li>
+              <li>RT5RV</li>
+            </ul>
+          </div>
+          <div class="radio-brand">
+            <h3>Rugged</h3>
+            <ul class="radio-models">
+              <li>RH5R</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -96,7 +152,7 @@
           <div class="import-options">
             <article class="import-option"><span class="tag">Online import</span><h3>RadioReference</h3><p>Import frequencies directly from your RadioReference account without retyping every channel.</p></article>
             <article class="import-option"><span class="tag">Repeater search</span><h3>myGMRS</h3><p>Browse local GMRS repeaters from the myGMRS database and bring useful results into your plan.</p></article>
-            <article class="import-option"><span class="tag">Your files</span><h3>CSV import & export</h3><p>Bring in an existing spreadsheet-based channel plan, edit it in the app, and export it again.</p></article>
+            <article class="import-option"><span class="tag">Your files</span><h3>CSV import & export</h3><p>Bring in an existing spreadsheet-based channel plan, edit it in the app, and export it back out.</p></article>
             <article class="import-option"><span class="tag">One tap</span><h3>Premade codeplugs</h3><p>Quickly load NOAA Weather, standard GMRS, or standard FRS channel sets.</p></article>
           </div>
         </div>
@@ -105,8 +161,8 @@
 
     <section class="workflow" id="workflow">
       <div class="wrap">
-        <div class="section-head"><span class="eyebrow">A simpler workflow</span><h2>Connect. Organize. Write.</h2><p>Field Programmer keeps the process understandable while protecting the radio image you started with.</p></div>
-        <div class="steps"><article class="step"><h3>Connect your radio</h3><p>Choose a supported radio and connect by Bluetooth or a compatible USB programming cable.</p></article><article class="step"><h3>Read and edit</h3><p>Load the radio, organize channels, and change the settings you need.</p></article><article class="step"><h3>Review and program</h3><p>Confirm the changes, then write the updated configuration back to the radio.</p></article></div>
+        <div class="section-head"><span class="eyebrow">A simpler workflow</span><h2>Connect. Organize. Write.</h2><p>Field Programmer keeps the process understandable while protecting the radio configuration you work hard to set up.</p></div>
+        <div class="steps"><article class="step"><h3>Connect your radio</h3><p>Choose a supported radio and connect by Bluetooth or a compatible USB programming cable.</p></article><article class="step"><h3>Read or create</h3><p>Read the current codeplug from the radio or start fresh. Import channels from CSV, RadioReference, myGMRS, or premade sets.</p></article><article class="step"><h3>Write it back</h3><p>Edit channels and settings, then write the updated codeplug back to the radio whenever you're ready.</p></article></div>
       </div>
     </section>
 
@@ -120,7 +176,7 @@
           </div>
           <div class="download-action">
             <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.ka0med.fieldprogrammer&hl=en_US" target="_blank" rel="noopener noreferrer" aria-label="Get Field Programmer on Google Play">
-              <svg viewBox="0 0 48 54" aria-hidden="true"><path fill="#00d7fe" d="M3 3.8 28.2 27 3 50.2c-1.1-1-1.8-2.6-1.8-4.6V8.4C1.2 6.4 1.9 4.8 3 3.8Z"/><path fill="#00ef77" d="m6.5 1.8 29.8 17.1-8.1 8.1L3 3.8c.9-.9 2.1-1.5 3.5-2Z"/><path fill="#ffea00" d="m36.3 18.9 8.2 4.7c3 1.7 3 5.1 0 6.8l-8.2 4.7-8.1-8.1 8.1-8.1Z"/><path fill="#ff3a44" d="M36.3 35.1 6.5 52.2c-1.4-.5-2.6-1.1-3.5-2L28.2 27l8.1 8.1Z"/></svg>
+              <svg viewBox="0 0 48 54" aria-hidden="true"><path fill="#00d7fe" d="M3 3.8 28.2 27 3 50.2c-1.1-1-1.8-2.6-1.8-4.6V8.4C1.2 6.4 1.9 4.8 3 3.8Z"/><path fill="#00ef77" d="m6.5 1.8 29.8 16.6L7.4 51.8C6.3 51 5.7 49.8 5.7 48.4V5.6c0-1.4.6-2.6 1.8-3.8Z"/><path fill="#ffe000" d="m36.3 27 11.8-6.8c1.5-1 2.4-2.5 2.4-4.2 0-1.8-.9-3.3-2.4-4.2L6.5 1.8c1.2-1 2.7-1.4 4.2-.8l28.6 16.5Z"/><path fill="#ff0000" d="M48.1 27c0-1.7-.9-3.2-2.4-4.2L36.3 27l9.4 4.2c1.5-.9 2.4-2.4 2.4-4.2Z"/><path fill="#ff0000" d="m36.3 27 9.4 6.8c1.5-1 2.4-2.5 2.4-4.2 0-1.8-.9-3.3-2.4-4.2l-9.4 1.6Z"/><path fill="#00d7fe" d="M10.7 49.8c-1.4 0-2.9-.5-4.2-1.5l28.6-16.5 9.4 5.4c1.5.9 2.4 2.4 2.4 4.2 0 1.7-.9 3.2-2.4 4.2L10.7 49.8Z"/></svg>
               <span class="play-copy"><small>GET IT ON</small><strong>Google Play</strong></span>
             </a>
             <p class="download-note">Opens the official Google Play listing</p>
@@ -133,11 +189,11 @@
       <div class="wrap">
         <div class="privacy-card">
           <div><span class="eyebrow">Built with field use in mind</span><h2>Your radio plan stays yours.</h2></div>
-          <div><p>Core programming data is stored locally on your device. Field Programmer does not require an account for normal radio programming, and you control when diagnostic information is shared.</p><p>Field Programmer is available now on Google Play. Radio features and connection methods vary by model and Android device.</p><p><a href="privacy.html">Read the complete privacy policy →</a></p></div>
+          <div><p>Core programming data is stored locally on your device. Field Programmer does not require an account for normal radio programming, and you control when diagnostic information is shared. Your codeplug is yours.</p></div>
         </div>
       </div>
     </section>
   </main>
-  <footer><div class="wrap footer-row"><span>© 2026 Field Programmer. All rights reserved.</span><span><a href="https://play.google.com/store/apps/details?id=com.ka0med.fieldprogrammer&hl=en_US" target="_blank" rel="noopener noreferrer">Google Play</a> · <a href="../">All projects</a> · <a href="privacy.html">Privacy</a></span></div></footer>
+  <footer><div class="wrap footer-row"><span>© 2026 Field Programmer. All rights reserved.</span><span><a href="https://play.google.com/store/apps/details?id=com.ka0med.fieldprogrammer&hl=en_US" target="_blank" rel="noopener noreferrer">Google Play</a> • <a href="privacy.html">Privacy</a></span></div></footer>
 </body>
 </html>
